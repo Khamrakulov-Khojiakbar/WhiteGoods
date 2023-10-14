@@ -1,0 +1,1 @@
+﻿WhiteGoods.WinForms.Program.Main();
