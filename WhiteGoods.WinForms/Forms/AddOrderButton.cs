@@ -381,7 +381,7 @@ namespace WhiteGoods.WinForms.Forms
 
                         try
                         {
-                            using (NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM technic WHERE is_selected = false ORDER BY technic_id LIMIT 1", connection))
+                            using (NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM technic WHERE is_selected = false and is_deleted = false ORDER BY technic_id LIMIT 1", connection))
                             {
 
                                 using (NpgsqlDataReader reader = cmd.ExecuteReader())
@@ -396,7 +396,7 @@ namespace WhiteGoods.WinForms.Forms
                                         // Отметить мастера как выбранного
                                         connection.Open();
 
-                                        using (NpgsqlCommand updateCmd = new NpgsqlCommand("UPDATE technic SET is_selected = true WHERE technic_id = @MasterID", connection))
+                                        using (NpgsqlCommand updateCmd = new NpgsqlCommand("UPDATE technic SET is_selected = true WHERE technic_id = @MasterID and is_deleted = false", connection))
                                         {
                                             updateCmd.Parameters.AddWithValue("@MasterID", currentMasterID);
                                             updateCmd.ExecuteNonQuery();

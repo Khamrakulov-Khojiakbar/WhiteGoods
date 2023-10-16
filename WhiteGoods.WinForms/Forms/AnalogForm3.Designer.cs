@@ -31,8 +31,7 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.viewerBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.orderControlBtn = new System.Windows.Forms.Button();
+            this.SettingsBtn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelManager = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -43,8 +42,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.viewerBtn);
             this.panelMenu.Controls.Add(this.button4);
-            this.panelMenu.Controls.Add(this.button3);
-            this.panelMenu.Controls.Add(this.orderControlBtn);
+            this.panelMenu.Controls.Add(this.SettingsBtn);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -72,7 +70,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Location = new System.Drawing.Point(549, 0);
+            this.button4.Location = new System.Drawing.Point(393, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 60);
             this.button4.TabIndex = 4;
@@ -80,33 +78,19 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // SettingsBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(393, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 60);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // orderControlBtn
-            // 
-            this.orderControlBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.orderControlBtn.FlatAppearance.BorderSize = 0;
-            this.orderControlBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.orderControlBtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.orderControlBtn.Location = new System.Drawing.Point(237, 0);
-            this.orderControlBtn.Name = "orderControlBtn";
-            this.orderControlBtn.Size = new System.Drawing.Size(150, 60);
-            this.orderControlBtn.TabIndex = 2;
-            this.orderControlBtn.Text = "Управление заказами";
-            this.orderControlBtn.UseVisualStyleBackColor = false;
-            this.orderControlBtn.Click += new System.EventHandler(this.button2_Click);
+            this.SettingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.SettingsBtn.FlatAppearance.BorderSize = 0;
+            this.SettingsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SettingsBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.SettingsBtn.Location = new System.Drawing.Point(237, 0);
+            this.SettingsBtn.Name = "SettingsBtn";
+            this.SettingsBtn.Size = new System.Drawing.Size(150, 60);
+            this.SettingsBtn.TabIndex = 3;
+            this.SettingsBtn.Text = "Настройки";
+            this.SettingsBtn.UseVisualStyleBackColor = false;
+            this.SettingsBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // panelLogo
             // 
@@ -146,8 +130,7 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button orderControlBtn;
+        private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panelManager;
         private System.Windows.Forms.Button viewerBtn;

@@ -10,7 +10,6 @@ namespace WhiteGoods.WinForms
         //Fields
         private Button currentButton;
         private Form activeForm;
-        private AnalogForm3 analogForm3;
         //Constructor
         public AnalogForm3()
         {
@@ -24,7 +23,7 @@ namespace WhiteGoods.WinForms
         }
         public void OpenChildFormToPanel(Form childF, object BtSender)
         {
-            if(activeForm != null)
+            if (activeForm != null)
             {
                 activeForm.Close();
             }
@@ -38,7 +37,7 @@ namespace WhiteGoods.WinForms
             childF.BringToFront();
             childF.Show();
         }
-       
+
 
         private void ActiveButton(object sender)
         {
@@ -51,7 +50,7 @@ namespace WhiteGoods.WinForms
                     currentButton.BackColor = ColorTranslator.FromHtml("#0c4da2 "); //#4169E1;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new Font(
-                        "Microsoft Sans Serif", 
+                        "Microsoft Sans Serif",
                         12.5F,
                         FontStyle.Regular,
                         GraphicsUnit.Point, ((byte)(204)));
@@ -68,9 +67,9 @@ namespace WhiteGoods.WinForms
                     prevBtn.BackColor = Color.FromArgb(51, 51, 76);
                     prevBtn.ForeColor = Color.Gainsboro;
                     prevBtn.Font = new Font(
-                        "Microsoft Sans Serif", 
-                        10F, 
-                        FontStyle.Regular, 
+                        "Microsoft Sans Serif",
+                        10F,
+                        FontStyle.Regular,
                         GraphicsUnit.Point, ((byte)(204)));
                 }
             }
@@ -88,7 +87,26 @@ namespace WhiteGoods.WinForms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
+            if (currentButton != (Button)sender)
+            {
+                ActiveButton(sender);
+                using (var passwordForm = new PasswordForm())
+                {
+                    if (passwordForm.ShowDialog() == DialogResult.OK)
+                    {
+                        string enteredPassword = passwordForm.EnteredPassword;
+
+                        if (enteredPassword == "1")
+                        {
+                            OpenChildFormToPanel(new SettingsForm(), sender);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Неверный пароль");
+                        }
+                    }
+                }
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -111,7 +129,7 @@ namespace WhiteGoods.WinForms
         }
         private void panelManager_DoubleClick(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
