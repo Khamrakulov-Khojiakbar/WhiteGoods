@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using WhiteGoods.WinForms.Forms;
@@ -96,7 +97,7 @@ namespace WhiteGoods.WinForms
                     {
                         string enteredPassword = passwordForm.EnteredPassword;
 
-                        if (enteredPassword == "1")
+                        if (enteredPassword == GetPassWordFromDB())
                         {
                             OpenChildFormToPanel(new SettingsForm(), sender);
                         }
@@ -109,9 +110,30 @@ namespace WhiteGoods.WinForms
             }
         }
 
+        private string GetPassWordFromDB()
+        {
+            const string _connection = "Server=localhost; Port=5432; Database=service; User Id=postgres; Password=1221;";
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(_connection))
+            {
+                conn.Open();
+
+                string cmdText = @"select * from WinFormsPassword";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(cmdText, conn))
+                {
+                    string password = cmd.ExecuteScalar().ToString();
+
+                    return password;
+                }
+
+            }
+
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
+            OpenChildFormToPanel(new InformationForm(), sender);
         }
 
         private void viewerBtn_Click(object sender, EventArgs e)
@@ -131,5 +153,6 @@ namespace WhiteGoods.WinForms
         {
 
         }
+
     }
 }

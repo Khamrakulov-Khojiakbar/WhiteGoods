@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhiteGoods.WinForms", "WhiteGoods.WinForms\WhiteGoods.WinForms.csproj", "{A33C73AC-99BD-43C1-809C-BE4CF64BF4BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangePasswordCA", "ChangePasswordCA\ChangePasswordCA.csproj", "{D82B95CF-0A8C-4C44-AE8E-584C523AF31E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A33C73AC-99BD-43C1-809C-BE4CF64BF4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A33C73AC-99BD-43C1-809C-BE4CF64BF4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A33C73AC-99BD-43C1-809C-BE4CF64BF4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82B95CF-0A8C-4C44-AE8E-584C523AF31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82B95CF-0A8C-4C44-AE8E-584C523AF31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82B95CF-0A8C-4C44-AE8E-584C523AF31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82B95CF-0A8C-4C44-AE8E-584C523AF31E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

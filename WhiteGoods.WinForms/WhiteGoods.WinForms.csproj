@@ -206,6 +206,30 @@
     <Compile Include="Forms\AnalogForm3.Designer.cs">
       <DependentUpon>AnalogForm3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\brandCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\brandCreateForm.Designer.cs">
+      <DependentUpon>brandCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\brandEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\brandEditForm.Designer.cs">
+      <DependentUpon>brandEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\deviceCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\deviceCreateForm.Designer.cs">
+      <DependentUpon>deviceCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\deviceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\deviceEditForm.Designer.cs">
+      <DependentUpon>deviceEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,11 +248,23 @@
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InformationForm.Designer.cs">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\masterCreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\masterCreateForm.Designer.cs">
       <DependentUpon>masterCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MasterEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterEditForm.Designer.cs">
+      <DependentUpon>MasterEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PasswordForm.cs">
       <SubType>Form</SubType>
@@ -241,6 +277,18 @@
     </Compile>
     <Compile Include="Forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\statusCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\statusCreateForm.Designer.cs">
+      <DependentUpon>statusCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\statusEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\statusEditForm.Designer.cs">
+      <DependentUpon>statusEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -268,6 +316,18 @@
     <EmbeddedResource Include="Forms\AnalogForm3.resx">
       <DependentUpon>AnalogForm3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\brandCreateForm.resx">
+      <DependentUpon>brandCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\brandEditForm.resx">
+      <DependentUpon>brandEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\deviceCreateForm.resx">
+      <DependentUpon>deviceCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\deviceEditForm.resx">
+      <DependentUpon>deviceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,14 +337,26 @@
     <EmbeddedResource Include="Forms\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InformationForm.resx">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\masterCreateForm.resx">
       <DependentUpon>masterCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterEditForm.resx">
+      <DependentUpon>MasterEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PasswordForm.resx">
       <DependentUpon>PasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\statusCreateForm.resx">
+      <DependentUpon>statusCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\statusEditForm.resx">
+      <DependentUpon>statusEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
