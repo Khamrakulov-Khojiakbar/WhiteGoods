@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnalogForm3));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.viewerBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -117,9 +118,10 @@
             this.ClientSize = new System.Drawing.Size(1348, 721);
             this.Controls.Add(this.panelManager);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AnalogForm3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AnalogForm3";
+            this.Text = "BM SERVICE CRM";
             this.Load += new System.EventHandler(this.AnalogForm3_Load);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);

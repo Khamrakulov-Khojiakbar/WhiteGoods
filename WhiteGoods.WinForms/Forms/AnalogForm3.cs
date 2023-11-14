@@ -15,6 +15,8 @@ namespace WhiteGoods.WinForms
         public AnalogForm3()
         {
             InitializeComponent();
+            this.ControlBox = false;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         //Methods

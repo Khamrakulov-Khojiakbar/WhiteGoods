@@ -15,6 +15,7 @@ namespace WhiteGoods.WinForms.Forms
         private bool statusDeviceLoaded = false;
         private bool statusDataLoaded = false;
         private int? selectedMaster = null;
+        private string selectedMasterPrint;
         //Constructor
         public AddOrderButton()
         {
@@ -35,6 +36,7 @@ namespace WhiteGoods.WinForms.Forms
             deviceSn_Leave(sender, e);
             clientAddressTextBox_Leave(sender, e);
             masterGetDataGridView_Enter(sender, e);
+            GetIdFromDB();
 
 
         }
@@ -153,7 +155,7 @@ namespace WhiteGoods.WinForms.Forms
         private void whichDeviceSelectCombobox_Enter(object sender, EventArgs e)
         {
 
-            
+
             if (whichDeviceSelectCombobox.Text == "Техника")
             {
                 whichDeviceSelectCombobox.Text = "";
@@ -284,7 +286,23 @@ namespace WhiteGoods.WinForms.Forms
                         cmd.Parameters.AddWithValue("@device_repaircost", 0);
                         cmd.ExecuteNonQuery();
 
+                        PrintForm printForm = new PrintForm();
+                        printForm.Id = GetIdFromDB();
+                        printForm.ClientName = clientNameBox.Text;
+                        printForm.ClientLastName = clientLastNameText.Text;
+                        printForm.ClientAddress = clientAddressTextBox.Text;
+                        printForm.ClientPhoneNumber = clientPhoneNumberText.Text;
+                        printForm.DeviceType = whichDeviceSelectCombobox.Text;
+                        printForm.DeviceBrand = brandCombobox.Text;
+                        printForm.DeviceModel = deviceModel.Text;
+                        printForm.DeviceSn = deviceSn.Text;
+                        printForm.DeviceCause = deviceCauseTextBox.Text;
+
+
                         MessageBox.Show("Данные успешно добавлены", "Добавление записей", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        printForm.DataFillToPrint();
+                        printForm.FillDataGridViewPrint();
+                        printForm.ShowDialog();
                         this.Close();
                     }
                     else
@@ -292,6 +310,34 @@ namespace WhiteGoods.WinForms.Forms
                 }
 
             }
+        }
+
+        private string GetIdFromDB()
+        {
+            int id;
+            using (NpgsqlConnection conn = new NpgsqlConnection(_connection))
+            {
+
+                conn.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand("select id from device order by id desc", conn))
+                {
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        /*while (reader.Read())
+                        {
+                            //int id = Int32.Parse(reader["id"].ToString());
+                            int id = reader.GetInt32(0);
+                            MessageBox.Show($"{id}");
+                            break;
+                        }*/
+                        reader.Read();
+                        id = reader.GetInt32(0);
+
+                    }
+                }
+                conn.Close();
+            }
+            return id.ToString();
         }
 
         private void deviceStatusCombobox_Click(object sender, EventArgs e)
@@ -401,7 +447,7 @@ namespace WhiteGoods.WinForms.Forms
                                             updateCmd.Parameters.AddWithValue("@MasterID", currentMasterID);
                                             updateCmd.ExecuteNonQuery();
                                         }
-
+                                        selectedMasterPrint = $"{firstName} {lastName}";
                                         MessageBox.Show($"Выбран мастер: {firstName} {lastName}");
                                         technicChooseButton.Enabled = false;
                                     }
@@ -435,7 +481,7 @@ namespace WhiteGoods.WinForms.Forms
                 using (NpgsqlConnection conn = new NpgsqlConnection(_connection))
                 {
                     conn.Open();
-                    string cmdText = "select first_name from technic where technic_id = @row";
+                    string cmdText = "select first_name, last_name from technic where technic_id = @row";
                     using (NpgsqlCommand command = new NpgsqlCommand(cmdText, conn))
                     {
                         command.Parameters.AddWithValue("@row", row);
@@ -444,9 +490,11 @@ namespace WhiteGoods.WinForms.Forms
                             if (reader.Read())
                             {
                                 string firstName = reader["first_name"].ToString();
+                                string lastName = reader["last_name"].ToString();
 
                                 MessageBox.Show($"Мастер:  {firstName}", "Выбранный мастер");
                                 selectedMaster = row;
+                                selectedMasterPrint = $"{firstName} {lastName}";
                             }
                             else
                             {

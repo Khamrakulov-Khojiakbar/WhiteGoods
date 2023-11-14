@@ -65,7 +65,7 @@
             this.cancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(156, 38);
-            this.cancelButton.TabIndex = 0;
+            this.cancelButton.TabIndex = 13;
             this.cancelButton.Text = "Отмена";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -79,7 +79,7 @@
             this.addButtonAddOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addButtonAddOrder.Name = "addButtonAddOrder";
             this.addButtonAddOrder.Size = new System.Drawing.Size(156, 38);
-            this.addButtonAddOrder.TabIndex = 1;
+            this.addButtonAddOrder.TabIndex = 12;
             this.addButtonAddOrder.Text = "Добавить";
             this.addButtonAddOrder.UseVisualStyleBackColor = false;
             this.addButtonAddOrder.Click += new System.EventHandler(this.addButtonAddOrder_Click);
@@ -130,10 +130,10 @@
             // technicChooseButton
             // 
             this.technicChooseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.technicChooseButton.Location = new System.Drawing.Point(637, 533);
+            this.technicChooseButton.Location = new System.Drawing.Point(649, 533);
             this.technicChooseButton.Name = "technicChooseButton";
             this.technicChooseButton.Size = new System.Drawing.Size(156, 36);
-            this.technicChooseButton.TabIndex = 27;
+            this.technicChooseButton.TabIndex = 11;
             this.technicChooseButton.Text = "Выбрать";
             this.technicChooseButton.UseVisualStyleBackColor = true;
             this.technicChooseButton.Click += new System.EventHandler(this.technicChooseButton_Click);
@@ -143,7 +143,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Black", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(443, 241);
+            this.label6.Location = new System.Drawing.Point(455, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 30);
             this.label6.TabIndex = 26;
@@ -153,7 +153,7 @@
             // 
             this.masterGetDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.masterGetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.masterGetDataGridView.Location = new System.Drawing.Point(448, 275);
+            this.masterGetDataGridView.Location = new System.Drawing.Point(460, 275);
             this.masterGetDataGridView.Name = "masterGetDataGridView";
             this.masterGetDataGridView.RowHeadersWidth = 51;
             this.masterGetDataGridView.RowTemplate.Height = 24;
@@ -168,7 +168,7 @@
             this.clientAddressTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clientAddressTextBox.Name = "clientAddressTextBox";
             this.clientAddressTextBox.Size = new System.Drawing.Size(199, 28);
-            this.clientAddressTextBox.TabIndex = 24;
+            this.clientAddressTextBox.TabIndex = 3;
             this.clientAddressTextBox.Enter += new System.EventHandler(this.clientAddressTextBox_Enter);
             this.clientAddressTextBox.Leave += new System.EventHandler(this.clientAddressTextBox_Leave);
             // 
@@ -178,11 +178,11 @@
             this.deviceStatusCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deviceStatusCombobox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deviceStatusCombobox.FormattingEnabled = true;
-            this.deviceStatusCombobox.Location = new System.Drawing.Point(448, 198);
+            this.deviceStatusCombobox.Location = new System.Drawing.Point(460, 198);
             this.deviceStatusCombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deviceStatusCombobox.Name = "deviceStatusCombobox";
             this.deviceStatusCombobox.Size = new System.Drawing.Size(201, 30);
-            this.deviceStatusCombobox.TabIndex = 23;
+            this.deviceStatusCombobox.TabIndex = 10;
             this.deviceStatusCombobox.Click += new System.EventHandler(this.deviceStatusCombobox_Click);
             // 
             // label5
@@ -190,7 +190,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Black", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(443, 158);
+            this.label5.Location = new System.Drawing.Point(455, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(206, 30);
             this.label5.TabIndex = 22;
@@ -203,7 +203,7 @@
             this.deviceCauseTextBox.Location = new System.Drawing.Point(8, 455);
             this.deviceCauseTextBox.Name = "deviceCauseTextBox";
             this.deviceCauseTextBox.Size = new System.Drawing.Size(345, 28);
-            this.deviceCauseTextBox.TabIndex = 21;
+            this.deviceCauseTextBox.TabIndex = 9;
             // 
             // label4
             // 
@@ -236,7 +236,7 @@
             this.deviceSn.Location = new System.Drawing.Point(14, 317);
             this.deviceSn.Name = "deviceSn";
             this.deviceSn.Size = new System.Drawing.Size(210, 28);
-            this.deviceSn.TabIndex = 18;
+            this.deviceSn.TabIndex = 8;
             this.deviceSn.Enter += new System.EventHandler(this.deviceSn_Enter);
             this.deviceSn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.deviceSn_KeyPress);
             this.deviceSn.Leave += new System.EventHandler(this.deviceSn_Leave);
@@ -248,7 +248,7 @@
             this.deviceModel.Location = new System.Drawing.Point(14, 265);
             this.deviceModel.Name = "deviceModel";
             this.deviceModel.Size = new System.Drawing.Size(210, 28);
-            this.deviceModel.TabIndex = 17;
+            this.deviceModel.TabIndex = 7;
             this.deviceModel.Enter += new System.EventHandler(this.deviceModel_Enter);
             this.deviceModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.deviceModel_KeyPress);
             this.deviceModel.Leave += new System.EventHandler(this.deviceModel_Leave);
@@ -263,7 +263,7 @@
             this.brandCombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.brandCombobox.Name = "brandCombobox";
             this.brandCombobox.Size = new System.Drawing.Size(150, 30);
-            this.brandCombobox.TabIndex = 16;
+            this.brandCombobox.TabIndex = 6;
             this.brandCombobox.Click += new System.EventHandler(this.brandCombobox_Click);
             this.brandCombobox.Enter += new System.EventHandler(this.brandCombobox_Enter);
             this.brandCombobox.Leave += new System.EventHandler(this.brandCombobox_Leave);
@@ -277,7 +277,7 @@
             this.whichDeviceSelectCombobox.Margin = new System.Windows.Forms.Padding(4);
             this.whichDeviceSelectCombobox.Name = "whichDeviceSelectCombobox";
             this.whichDeviceSelectCombobox.Size = new System.Drawing.Size(175, 30);
-            this.whichDeviceSelectCombobox.TabIndex = 6;
+            this.whichDeviceSelectCombobox.TabIndex = 5;
             this.whichDeviceSelectCombobox.Click += new System.EventHandler(this.whichDeviceSelectCombobox_Click);
             this.whichDeviceSelectCombobox.Enter += new System.EventHandler(this.whichDeviceSelectCombobox_Enter);
             this.whichDeviceSelectCombobox.Leave += new System.EventHandler(this.whichDeviceSelectCombobox_Leave);
@@ -312,7 +312,7 @@
             this.clientPhoneNumberText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clientPhoneNumberText.Name = "clientPhoneNumberText";
             this.clientPhoneNumberText.Size = new System.Drawing.Size(198, 28);
-            this.clientPhoneNumberText.TabIndex = 3;
+            this.clientPhoneNumberText.TabIndex = 4;
             this.clientPhoneNumberText.Enter += new System.EventHandler(this.clientPhoneNumberText_Enter);
             this.clientPhoneNumberText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.clientPhoneNumberText_KeyPress);
             this.clientPhoneNumberText.Leave += new System.EventHandler(this.clientPhoneNumberText_Leave);
@@ -361,7 +361,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(900, 768);
             this.Name = "AddOrderButton";
-            this.Text = "AddOrderButton";
+            this.Text = "Создание ремонта";
             this.Load += new System.EventHandler(this.AddOrderButton_Load);
             this.panel1.ResumeLayout(false);
             this.panelAddOrderButtonMenu.ResumeLayout(false);
