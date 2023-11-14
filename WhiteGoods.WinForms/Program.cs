@@ -14,7 +14,7 @@ namespace WhiteGoods.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PrintForm());
+            Application.Run(new AnalogForm3());
         }
     }
 }

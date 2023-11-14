@@ -29,8 +29,15 @@ namespace WhiteGoods.WinForms.Forms
             DataGridDevicePrint.AllowUserToAddRows = false;
             PrintDataGridView.RowHeadersVisible = false;
             PrintDataGridView.AllowUserToAddRows = false;
-            clientNameLabel.Text = "Abdulaziz";
             DataFillToPrint();
+            LabelEdit(FirstRoleLabel);
+
+        }
+
+        private void LabelEdit(System.Windows.Forms.Label label)
+        {
+            label.AutoSize = false;
+            label.AutoEllipsis = true;
         }
 
         public void ShowBox()
@@ -44,7 +51,6 @@ namespace WhiteGoods.WinForms.Forms
 
         public void DataFillToPrint()
         {
-            clientNameLabel.Text = ClientName;
             idLabel.Text = $"Квитанция {Id} от {Date}";
         }
 
